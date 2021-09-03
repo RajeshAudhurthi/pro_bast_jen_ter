@@ -13,7 +13,7 @@ resource "aws_db_instance" "mysql" {
   allow_major_version_upgrade = true
   auto_minor_version_upgrade  = true
   backup_retention_period     = 35
-  backup_window               = "22:00-23:00"
+  backup_window               = "22:00-23:30"
   maintenance_window          = "Sat:00:00-Sat:03:00"
   multi_az                    = true
   skip_final_snapshot         = true
