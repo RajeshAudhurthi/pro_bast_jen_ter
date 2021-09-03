@@ -37,7 +37,7 @@ resource "aws_instance" "bastion_host" {
       Name = "bastion host"
   }
   provisioner "file" {
-    source      = "F:/Rajesh/Downloads/playbook/Devops/Terraform2908/rajesh-nvirgina.pem"
+    source      = "F:/Rajesh/Downloads/Project_tasks/pro_bast_jen_ter/rajesh-nvirgina.pem"
     destination = "/home/ec2-user/rajesh-nvirginia.pem"
   connection {
   type = "ssh"

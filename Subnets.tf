@@ -56,7 +56,7 @@ resource "aws_subnet" "rds_subnet2" {
   vpc_id     = aws_vpc.vpc.id
   cidr_block = var.privatesubnetcidr3
 
-  availability_zone = var.privateaz
+  availability_zone = var.privateaz2
 
   tags = {
     Name = "rds_subnet2"

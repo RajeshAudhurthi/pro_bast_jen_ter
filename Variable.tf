@@ -26,6 +26,10 @@ variable "privateaz" {
   type = string
   default = "us-east-1a"
 }
+variable "privateaz2" {
+  type = string
+  default = "us-east-1b"
+}
 variable "amiid" {
   type = string
   default = "ami-0c2b8ca1dad447f8a"
