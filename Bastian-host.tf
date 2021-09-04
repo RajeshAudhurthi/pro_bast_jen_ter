@@ -37,13 +37,14 @@ resource "aws_instance" "bastion_host" {
       Name = "bastion host"
   }
   provisioner "file" {
-    source      = "F:/Rajesh/Downloads/Project_tasks/pro_bast_jen_ter/rajesh-nvirgina.pem"
+    source      = "key/rajesh-nvirginia.pem"
     destination = "/home/ec2-user/rajesh-nvirginia.pem"
-  connection {
-  type = "ssh"
-  user = "ec2-user"
-  private_key = file("rajesh-nvirginia.pem")
-  host = aws_instance.bastion_host.public_ip
-  }
+    
+    connection {
+      type = "ssh"
+      user = "ec2-user"
+      private_key = file("rajesh-nvirginia.pem")
+      host = aws_instance.bastion_host.public_ip
+    }
   }  
 }
