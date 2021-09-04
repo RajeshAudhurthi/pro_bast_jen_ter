@@ -43,7 +43,7 @@ resource "aws_instance" "bastion_host" {
     connection {
       type = "ssh"
       user = "ec2-user"
-      private_key = file("rajesh-nvirginia.pem")
+      private_key = file("key/rajesh-nvirginia.pem")
       host = aws_instance.bastion_host.public_ip
     }
   }  
