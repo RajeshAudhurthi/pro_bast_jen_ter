@@ -62,3 +62,5 @@ resource "aws_subnet" "rds_subnet2" {
     Name = "rds_subnet2"
   }
 }
+
+
