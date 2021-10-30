@@ -11,3 +11,10 @@ sudo systemctl start jenkins
 sudo systemctl status jenkins
 sudo yum install maven -y
 sudo yum install git -y
+sudo yum update -y
+sudo amazon-linux-extras install docker -y
+sudo service docker start
+sudo systemctl enable docker
+sudo usermod -a -G docker ec2-user
+sudo usermod -a -G docker jenkins  ## reboot
+sudo systemctl daemon-reload
